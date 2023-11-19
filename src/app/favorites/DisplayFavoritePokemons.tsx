@@ -15,8 +15,8 @@ export default function DisplayFavoritePokemons({favPokemons}: {favPokemons: num
     <div>
           <h1 className="text-4xl font-bold">Favoritos</h1>
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 gap-4 justify-items-center pt-4">
-            {favPokemons.map((id) => (
-              <Card isHoverable isPressable onClick={() => handleClick(id)}>
+            {favPokemons.map((id, index) => (
+              <Card isHoverable isPressable onClick={() => handleClick(id)} key={index}>
                 <CardBody>
                   <h1> {id}</h1>
                   <Image
